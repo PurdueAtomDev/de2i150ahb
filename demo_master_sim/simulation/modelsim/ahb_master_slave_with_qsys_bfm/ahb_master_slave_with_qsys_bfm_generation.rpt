@@ -1,0 +1,159 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim --output-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation --file-set=SIM_VERILOG --report-file=html:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.html --report-file=sopcinfo:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm.sopcinfo --report-file=csv:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.csv --report-file=spd:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.spd --report-file=cmp:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.cmp --report-file=sip:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/ahb_master_slave_with_qsys_bfm.sip --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm.qsys
+Progress: Loading demo_master_sim/ahb_master_slave_with_qsys_bfm.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mm_master_bfm_0 [altera_avalon_mm_master_bfm 14.0]
+Progress: Parameterizing module mm_master_bfm_0
+Progress: Adding mm_slave_bfm_0 [altera_avalon_mm_slave_bfm 14.0]
+Progress: Parameterizing module mm_slave_bfm_0
+Progress: Adding ahb_master_slave_2_0 [ahb_master_slave_2 2.0]
+Progress: Parameterizing module ahb_master_slave_2_0
+Progress: Adding avalon2ahb_bridge_0 [avalon2ahb_bridge 2.0]
+Progress: Parameterizing module avalon2ahb_bridge_0
+Progress: Adding ahb2avalon_burst_bridge_0 [ahb2avalon_burst_bridge 1.0]
+Progress: Parameterizing module ahb2avalon_burst_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ahb_master_slave_with_qsys_bfm: Generating ahb_master_slave_with_qsys_bfm "ahb_master_slave_with_qsys_bfm" for SIM_VERILOG
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon2ahb_bridge_0.avalon_slave because the master has address signal 32 bit wide, but the slave is 5 bit wide.
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon2ahb_bridge_0.avalon_slave because the master has burstcount signal 3 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon2ahb_bridge_0.avalon_slave because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master ahb2avalon_burst_bridge_0.avalon_master and slave mm_slave_bfm_0.s0 because the master has address signal 32 bit wide, but the slave is 5 bit wide.
+Info: Interconnect is inserted between master ahb2avalon_burst_bridge_0.avalon_master and slave mm_slave_bfm_0.s0 because the master has burstcount signal 4 bit wide, but the slave is 0 bit wide.
+Info: mm_master_bfm_0: "ahb_master_slave_with_qsys_bfm" instantiated altera_avalon_mm_master_bfm "mm_master_bfm_0"
+Info: mm_slave_bfm_0: "ahb_master_slave_with_qsys_bfm" instantiated altera_avalon_mm_slave_bfm "mm_slave_bfm_0"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/submodules/avalon_mm_pkg.sv
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/submodules/avalon_utilities_pkg.sv
+Info: ahb_master_slave_2_0: "ahb_master_slave_with_qsys_bfm" instantiated ahb_master_slave_2 "ahb_master_slave_2_0"
+Info: avalon2ahb_bridge_0: "ahb_master_slave_with_qsys_bfm" instantiated avalon2ahb_bridge "avalon2ahb_bridge_0"
+Info: ahb2avalon_burst_bridge_0: "ahb_master_slave_with_qsys_bfm" instantiated ahb2avalon_burst_bridge "ahb2avalon_burst_bridge_0"
+Info: mm_interconnect_0: "ahb_master_slave_with_qsys_bfm" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_3: "ahb_master_slave_with_qsys_bfm" instantiated altera_mm_interconnect "mm_interconnect_3"
+Info: rst_controller: "ahb_master_slave_with_qsys_bfm" instantiated altera_reset_controller "rst_controller"
+Info: mm_master_bfm_0_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "mm_master_bfm_0_m0_translator"
+Info: avalon2ahb_bridge_0_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "avalon2ahb_bridge_0_avalon_slave_translator"
+Info: mm_master_bfm_0_m0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "mm_master_bfm_0_m0_agent"
+Info: avalon2ahb_bridge_0_avalon_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "avalon2ahb_bridge_0_avalon_slave_agent"
+Info: avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: avalon2ahb_bridge_0_avalon_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "avalon2ahb_bridge_0_avalon_slave_burst_adapter"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_3" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_3" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv
+Info: ahb_master_slave_with_qsys_bfm: Done "ahb_master_slave_with_qsys_bfm" with 25 modules, 40 files
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.spd --output-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/
+Info: Doing: ip-make-simscript --spd=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.spd --output-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	20 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim --output-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm --report-file=bsf:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.bsf --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm.qsys
+Progress: Loading demo_master_sim/ahb_master_slave_with_qsys_bfm.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mm_master_bfm_0 [altera_avalon_mm_master_bfm 14.0]
+Progress: Parameterizing module mm_master_bfm_0
+Progress: Adding mm_slave_bfm_0 [altera_avalon_mm_slave_bfm 14.0]
+Progress: Parameterizing module mm_slave_bfm_0
+Progress: Adding ahb_master_slave_2_0 [ahb_master_slave_2 2.0]
+Progress: Parameterizing module ahb_master_slave_2_0
+Progress: Adding avalon2ahb_bridge_0 [avalon2ahb_bridge 2.0]
+Progress: Parameterizing module avalon2ahb_bridge_0
+Progress: Adding ahb2avalon_burst_bridge_0 [ahb2avalon_burst_bridge 1.0]
+Progress: Parameterizing module ahb2avalon_burst_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim --output-directory=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis --file-set=QUARTUS_SYNTH --report-file=html:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.html --report-file=sopcinfo:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm.sopcinfo --report-file=cmp:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.cmp --report-file=qip:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/ahb_master_slave_with_qsys_bfm.qip --report-file=svd:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/ahb_master_slave_with_qsys_bfm.svd --report-file=regmap:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/ahb_master_slave_with_qsys_bfm.regmap --report-file=xml:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/ahb_master_slave_with_qsys_bfm.xml --report-file=debuginfo:/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/ahb_master_slave_with_qsys_bfm.debuginfo --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm.qsys --language=VERILOG
+Progress: Loading demo_master_sim/ahb_master_slave_with_qsys_bfm.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 14.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mm_master_bfm_0 [altera_avalon_mm_master_bfm 14.0]
+Progress: Parameterizing module mm_master_bfm_0
+Progress: Adding mm_slave_bfm_0 [altera_avalon_mm_slave_bfm 14.0]
+Progress: Parameterizing module mm_slave_bfm_0
+Progress: Adding ahb_master_slave_2_0 [ahb_master_slave_2 2.0]
+Progress: Parameterizing module ahb_master_slave_2_0
+Progress: Adding avalon2ahb_bridge_0 [avalon2ahb_bridge 2.0]
+Progress: Parameterizing module avalon2ahb_bridge_0
+Progress: Adding ahb2avalon_burst_bridge_0 [ahb2avalon_burst_bridge 1.0]
+Progress: Parameterizing module ahb2avalon_burst_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ahb_master_slave_with_qsys_bfm: Generating ahb_master_slave_with_qsys_bfm "ahb_master_slave_with_qsys_bfm" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon2ahb_bridge_0.avalon_slave because the master has address signal 32 bit wide, but the slave is 5 bit wide.
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon2ahb_bridge_0.avalon_slave because the master has burstcount signal 3 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_master_bfm_0.m0 and slave avalon2ahb_bridge_0.avalon_slave because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master ahb2avalon_burst_bridge_0.avalon_master and slave mm_slave_bfm_0.s0 because the master has address signal 32 bit wide, but the slave is 5 bit wide.
+Info: Interconnect is inserted between master ahb2avalon_burst_bridge_0.avalon_master and slave mm_slave_bfm_0.s0 because the master has burstcount signal 4 bit wide, but the slave is 0 bit wide.
+Info: mm_master_bfm_0: "ahb_master_slave_with_qsys_bfm" instantiated altera_avalon_mm_master_bfm "mm_master_bfm_0"
+Info: mm_slave_bfm_0: "ahb_master_slave_with_qsys_bfm" instantiated altera_avalon_mm_slave_bfm "mm_slave_bfm_0"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/submodules/verbosity_pkg.sv
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/submodules/avalon_mm_pkg.sv
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/submodules/avalon_utilities_pkg.sv
+Info: ahb_master_slave_2_0: "ahb_master_slave_with_qsys_bfm" instantiated ahb_master_slave_2 "ahb_master_slave_2_0"
+Info: avalon2ahb_bridge_0: "ahb_master_slave_with_qsys_bfm" instantiated avalon2ahb_bridge "avalon2ahb_bridge_0"
+Info: ahb2avalon_burst_bridge_0: "ahb_master_slave_with_qsys_bfm" instantiated ahb2avalon_burst_bridge "ahb2avalon_burst_bridge_0"
+Info: mm_interconnect_0: "ahb_master_slave_with_qsys_bfm" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_3: "ahb_master_slave_with_qsys_bfm" instantiated altera_mm_interconnect "mm_interconnect_3"
+Info: rst_controller: "ahb_master_slave_with_qsys_bfm" instantiated altera_reset_controller "rst_controller"
+Info: mm_master_bfm_0_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "mm_master_bfm_0_m0_translator"
+Info: avalon2ahb_bridge_0_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "avalon2ahb_bridge_0_avalon_slave_translator"
+Info: mm_master_bfm_0_m0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "mm_master_bfm_0_m0_agent"
+Info: avalon2ahb_bridge_0_avalon_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "avalon2ahb_bridge_0_avalon_slave_agent"
+Info: avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: avalon2ahb_bridge_0_avalon_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "avalon2ahb_bridge_0_avalon_slave_burst_adapter"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_3" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_3" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/ahb_master_slave_with_qsys_bfm/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: ahb_master_slave_with_qsys_bfm: Done "ahb_master_slave_with_qsys_bfm" with 25 modules, 40 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

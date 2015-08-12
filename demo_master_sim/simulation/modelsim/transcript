@@ -1,0 +1,1542 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+do run_simulation.tcl
+# ahb_master_slave_with_qsys_bfm
+# ahb_master_slave_with_qsys_bfm/simulation
+# tb
+# [exec] file_copy
+# List Of Command Line Aliases
+# 
+# file_copy                     -- Copy ROM/RAM files to simulation directory
+# 
+# dev_com                       -- Compile device library files
+# 
+# com                           -- Compile the design files in correct order
+# 
+# elab                          -- Elaborate top level design
+# 
+# elab_debug                    -- Elaborate the top level design with novopt option
+# 
+# ld                            -- Compile all the design files and elaborate the top level design
+# 
+# ld_debug                      -- Compile all the design files and elaborate the top level design with -novopt
+# 
+# 
+# 
+# List Of Variables
+# 
+# TOP_LEVEL_NAME                -- Top level module name.
+# 
+# SYSTEM_INSTANCE_NAME          -- Instantiated system module name inside top level module.
+# 
+# QSYS_SIMDIR                   -- Qsys base simulation directory.
+# 
+# QUARTUS_INSTALL_DIR           -- Quartus installation directory.
+# [exec] dev_com
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:30 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/altera_primitives.v -work altera_ver 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 23:06:31 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:31 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/220model.v -work lpm_ver 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# End time: 23:06:32 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:32 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/sgate.v -work sgate_ver 
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 23:06:32 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:32 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/altera_mf.v -work altera_mf_ver 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 23:06:34 on Aug 06,2015, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:34 on Aug 06,2015
+# vlog -reportprogress 300 -sv /package/eda/altera/altera14.0/quartus/eda/sim_lib/altera_lnsim.sv -work altera_lnsim_ver 
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_chainout_adder_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module twentynm_iopll_ip
+# -- Compiling module altera_pll_dps_lcell_comb
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# End time: 23:06:35 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:35 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/cycloneiv_hssi_atoms.v -work cycloneiv_hssi_ver 
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling module cycloneiv_hssi_tx_pma
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling module cycloneiv_hssi_rx_pma
+# -- Compiling module cycloneiv_hssi_pcs_reset
+# -- Compiling module cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling module cycloneiv_hssi_phystatus_generator_fsm
+# -- Compiling module cycloneiv_hssi_phystatus_generator
+# -- Compiling module cycloneiv_hssi_rx_pipe_interface
+# -- Compiling module cycloneiv_hssi_tx_pipe_interface
+# -- Compiling module cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling module cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling module cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling module cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling module cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling module cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling module cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling module cycloneiv_hssi_tx_digi
+# -- Compiling module cycloneiv_hssi_tx_pcs
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map
+# -- Compiling module cycloneiv_hssi_cmu_dprio_top
+# -- Compiling module cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling module cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling module cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling module cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling module cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling module cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling module cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling module cycloneiv_hssi_rx_digi
+# -- Compiling module cycloneiv_hssi_rx_pcs
+# -- Compiling module cycloneiv_hssi_dskw_sm
+# -- Compiling module cycloneiv_hssi_tx_sm
+# -- Compiling module cycloneiv_hssi_rcv_sm
+# -- Compiling module cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling module cycloneiv_hssi_cmu_quad_reset
+# -- Compiling module cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_cmu_clk_gating
+# -- Compiling module cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_status
+# -- Compiling module cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling module cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling module cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling module cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling module cycloneiv_hssi_cmu
+# -- Compiling module cycloneiv_hssi_calibration_block
+# 
+# Top level modules:
+# 	cycloneiv_hssi_tx_pma
+# 	cycloneiv_hssi_rx_pma
+# 	cycloneiv_hssi_tx_pcs
+# 	cycloneiv_hssi_rx_pcs
+# 	cycloneiv_hssi_cmu_dprio_centrl_top
+# 	cycloneiv_hssi_cmu
+# 	cycloneiv_hssi_calibration_block
+# End time: 23:06:38 on Aug 06,2015, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:38 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.v -work cycloneiv_pcie_hip_ver 
+# -- Compiling module cycloneiv_pciehip_param
+# -- Compiling module cycloneiv_pciehip_clkmux
+# -- Compiling module cycloneiv_pciehip_dprio_bit
+# -- Compiling module cycloneiv_pciehip_dprio_16bit
+# -- Compiling module cycloneiv_pciehip_dprio_addr
+# -- Compiling module cycloneiv_pciehip_dprio_cnt
+# -- Compiling module cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling module cycloneiv_pciehip_dprio_sm
+# -- Compiling module cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling module cycloneiv_pciehip_dprio_reg
+# -- Compiling module cycloneiv_pciehip_dprio_reg_top
+# -- Compiling module cycloneiv_pciehip_hip_dprio_top
+# -- Compiling module cycloneiv_pciehip_compute_bit
+# -- Compiling module cycloneiv_pciehip_ecc_gen
+# -- Compiling module cycloneiv_pciehip_ecc_chk
+# -- Compiling module cycloneiv_pciehip_ecc_decoder
+# -- Compiling module cycloneiv_pciehip_pulse_ext
+# -- Compiling module cycloneiv_pciehip_hip_mram
+# -- Compiling module cycloneiv_pciehip_mram_top
+# -- Compiling module cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling module cycloneiv_pciehip_iei_detect
+# -- Compiling module cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling module cycloneiv_pciehip_hip_top
+# -- Compiling module cycloneiv_hssi_pcie_hip
+# 
+# Top level modules:
+# 	cycloneiv_hssi_pcie_hip
+# End time: 23:06:41 on Aug 06,2015, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:41 on Aug 06,2015
+# vlog -reportprogress 300 /package/eda/altera/altera14.0/quartus/eda/sim_lib/cycloneiv_atoms.v -work cycloneiv_ver 
+# -- Compiling UDP CYCLONEIV_PRIM_DFFE
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneiv_dffe
+# -- Compiling module cycloneiv_mux21
+# -- Compiling module cycloneiv_mux41
+# -- Compiling module cycloneiv_and1
+# -- Compiling module cycloneiv_and16
+# -- Compiling module cycloneiv_bmux21
+# -- Compiling module cycloneiv_b17mux21
+# -- Compiling module cycloneiv_nmux21
+# -- Compiling module cycloneiv_b5mux21
+# -- Compiling module cycloneiv_latch
+# -- Compiling module cycloneiv_routing_wire
+# -- Compiling module cycloneiv_lcell_comb
+# -- Compiling module cycloneiv_io_ibuf
+# -- Compiling module cycloneiv_io_obuf
+# -- Compiling module cycloneiv_ddio_out
+# -- Compiling module cycloneiv_ddio_oe
+# -- Compiling module cycloneiv_ff
+# -- Compiling module cycloneiv_ram_pulse_generator
+# -- Compiling module cycloneiv_ram_register
+# -- Compiling module cycloneiv_ram_block
+# -- Compiling module cycloneiv_mac_data_reg
+# -- Compiling module cycloneiv_mac_sign_reg
+# -- Compiling module cycloneiv_mac_mult_internal
+# -- Compiling module cycloneiv_mac_mult
+# -- Compiling module cycloneiv_mac_out
+# -- Compiling module cycloneiv_io_pad
+# -- Compiling module cycloneiv_ena_reg
+# -- Compiling module cycloneiv_clkctrl
+# -- Compiling module cycloneiv_pseudo_diff_out
+# -- Compiling module cycloneiv_rublock
+# -- Compiling module cycloneiv_termination_ctrl
+# -- Compiling module cycloneiv_termination_rupdn
+# -- Compiling module cycloneiv_termination
+# -- Compiling module cycloneiv_jtag
+# -- Compiling module cycloneiv_crcblock
+# -- Compiling module cycloneiv_oscillator
+# -- Compiling module cycloneiv_controller
+# -- Compiling module cycloneiv_asmiblock
+# -- Compiling module cycloneiv_m_cntr
+# -- Compiling module cycloneiv_n_cntr
+# -- Compiling module cycloneiv_scale_cntr
+# -- Compiling module cycloneiv_post_divider
+# -- Compiling module cycloneiv_pll_reg
+# -- Compiling module cycloneiv_pll
+# 
+# Top level modules:
+# 	cycloneiv_dffe
+# 	cycloneiv_and1
+# 	cycloneiv_and16
+# 	cycloneiv_bmux21
+# 	cycloneiv_b17mux21
+# 	cycloneiv_nmux21
+# 	cycloneiv_b5mux21
+# 	cycloneiv_lcell_comb
+# 	cycloneiv_io_ibuf
+# 	cycloneiv_io_obuf
+# 	cycloneiv_ddio_out
+# 	cycloneiv_ddio_oe
+# 	cycloneiv_ff
+# 	cycloneiv_ram_block
+# 	cycloneiv_mac_mult
+# 	cycloneiv_mac_out
+# 	cycloneiv_io_pad
+# 	cycloneiv_clkctrl
+# 	cycloneiv_pseudo_diff_out
+# 	cycloneiv_rublock
+# 	cycloneiv_termination
+# 	cycloneiv_jtag
+# 	cycloneiv_crcblock
+# 	cycloneiv_oscillator
+# 	cycloneiv_controller
+# 	cycloneiv_asmiblock
+# 	cycloneiv_pll_reg
+# 	cycloneiv_pll
+# End time: 23:06:42 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# [exec] com
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:42 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/verbosity_pkg.sv -work altera_common_sv_packages 
+# -- Compiling package verbosity_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:06:42 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:42 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/avalon_mm_pkg.sv -work altera_common_sv_packages 
+# -- Compiling package avalon_mm_pkg
+# -- Importing package verbosity_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/avalon_utilities_pkg.sv -work altera_common_sv_packages 
+# -- Compiling package avalon_utilities_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv -L altera_common_sv_packages -work rsp_mux 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_3_rsp_mux.sv -L altera_common_sv_packages -work rsp_mux 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_rsp_mux
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_3_rsp_mux
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv -L altera_common_sv_packages -work cmd_mux 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_mux.sv -L altera_common_sv_packages -work cmd_mux 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_mux
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_mux
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_demux.sv -L altera_common_sv_packages -work cmd_demux 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_demux
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_demux
+# End time: 23:06:43 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:43 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001.sv -L altera_common_sv_packages -work router_001 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001_default_decode
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router.sv -L altera_common_sv_packages -work router 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_default_decode
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv -L altera_common_sv_packages -work rsp_mux 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_0_rsp_mux.sv -L altera_common_sv_packages -work rsp_mux 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_rsp_mux
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_0_rsp_mux
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_arbitrator.sv -L altera_common_sv_packages -work cmd_mux 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_mux.sv -L altera_common_sv_packages -work cmd_mux 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_mux
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_mux
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_demux.sv -L altera_common_sv_packages -work cmd_demux 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_demux
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_demux
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_13_1.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_merlin_burst_adapter_burstwrap_increment
+# -- Compiling module altera_merlin_burst_adapter_adder
+# -- Compiling module altera_merlin_burst_adapter_subtractor
+# -- Compiling module altera_merlin_burst_adapter_min
+# -- Compiling module altera_merlin_burst_adapter_13_1
+# -- Compiling module altera_merlin_burst_adapter_uncompressed_only_13_1
+# -- Compiling module altera_merlin_burst_adapter_full_13_1
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter_13_1
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_merlin_burst_adapter
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter
+# End time: 23:06:44 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:44 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_merlin_burst_adapter_new
+# -- Compiling module altera_merlin_burst_adapter_full_new
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(546): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(547): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(548): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(549): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(550): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(551): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(552): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(553): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(554): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(556): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(557): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(558): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(559): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(560): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(561): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(562): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(563): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(564): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(565): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(627): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(628): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(629): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(630): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(631): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(632): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(633): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(634): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(635): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(746): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(747): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(748): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(771): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(848): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(991): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(992): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(993): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(994): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(995): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(996): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(997): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(998): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(999): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1000): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1001): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1002): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1042): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1043): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1044): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1045): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1046): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1047): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1083): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1085): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1088): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1090): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1252): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1253): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1254): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1255): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1256): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1257): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1258): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1259): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1260): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1261): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1262): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1263): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1264): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1265): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1309): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1310): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1311): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1312): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1313): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1314): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1315): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1332): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1334): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1522): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1523): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1524): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1525): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1526): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1527): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1528): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1529): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1530): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1531): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1532): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1533): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1534): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1535): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1580): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1581): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1582): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1583): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1584): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1585): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1586): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1618): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_adapter_new.sv(1621): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# -- Compiling module altera_merlin_burst_adapter_uncompressed_only_new
+# -- Compiling module top_wrap_and_default_conveters
+# -- Compiling module top_wrap_incr_and_default_conveters
+# -- Compiling module top_incr_and_default_conveters
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter_new
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 101
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_address_alignment.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_merlin_address_alignment
+# 
+# Top level modules:
+# 	altera_merlin_address_alignment
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_wrap_burst_converter.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_wrap_burst_converter
+# 
+# Top level modules:
+# 	altera_wrap_burst_converter
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_incr_burst_converter.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_incr_burst_converter
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_incr_burst_converter.sv(267): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_incr_burst_converter.sv(271): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_incr_burst_converter.sv(273): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_incr_burst_converter.sv(288): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_incr_burst_converter.sv(290): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# 
+# Top level modules:
+# 	altera_incr_burst_converter
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_default_burst_converter.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_default_burst_converter
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_default_burst_converter.sv(104): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# 
+# Top level modules:
+# 	altera_default_burst_converter
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_st_pipeline_stage.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_avalon_st_pipeline_stage
+# 
+# Top level modules:
+# 	altera_avalon_st_pipeline_stage
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_st_pipeline_base.v -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_burst_adapter 
+# -- Compiling module altera_avalon_st_pipeline_base
+# 
+# Top level modules:
+# 	altera_avalon_st_pipeline_base
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001.sv -L altera_common_sv_packages -work router_001 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001_default_decode
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001
+# End time: 23:06:45 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:45 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router.sv -L altera_common_sv_packages -work router 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_default_decode
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_sc_fifo.v -work avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_slave_agent.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_agent 
+# -- Compiling module altera_merlin_slave_agent
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_slave_agent.sv(486): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_slave_agent.sv(487): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_slave_agent.sv(488): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_slave_agent.sv(489): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# 
+# Top level modules:
+# 	altera_merlin_slave_agent
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_burst_uncompressor.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_agent 
+# -- Compiling module altera_merlin_burst_uncompressor
+# 
+# Top level modules:
+# 	altera_merlin_burst_uncompressor
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_master_agent.sv -L altera_common_sv_packages -work mm_master_bfm_0_m0_agent 
+# -- Compiling module altera_merlin_master_agent
+# 
+# Top level modules:
+# 	altera_merlin_master_agent
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_slave_translator.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0_avalon_slave_translator 
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_merlin_master_translator.sv -L altera_common_sv_packages -work mm_master_bfm_0_m0_translator 
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_reset_controller.v -work rst_controller 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_reset_synchronizer.v -work rst_controller 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 23:06:46 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:46 on Aug 06,2015
+# vlog -reportprogress 300 ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_3.v -work mm_interconnect_3 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_3
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_3
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_master_slave_with_qsys_bfm_mm_interconnect_0.v -work mm_interconnect_0 
+# -- Compiling module ahb_master_slave_with_qsys_bfm_mm_interconnect_0
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm_mm_interconnect_0
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv -L altera_common_sv_packages -work ahb2avalon_burst_bridge_0 
+# -- Compiling module ahb_avalon_bridge_with_burst
+# 
+# Top level modules:
+# 	ahb_avalon_bridge_with_burst
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/avalon_ahb_bridge.sv -L altera_common_sv_packages -work avalon2ahb_bridge_0 
+# -- Compiling module avalon_ahb_bridge
+# 
+# Top level modules:
+# 	avalon_ahb_bridge
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv -L altera_common_sv_packages -work ahb_master_slave_2_0 
+# -- Compiling module top_level
+# 
+# Top level modules:
+# 	top_level
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_mm_slave_bfm.sv -L altera_common_sv_packages -work mm_slave_bfm_0 
+# -- Compiling module altera_avalon_mm_slave_bfm
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# -- Importing package altera_common_sv_packages.avalon_mm_pkg
+# -- Importing package altera_common_sv_packages.avalon_utilities_pkg
+# 
+# Top level modules:
+# 	altera_avalon_mm_slave_bfm
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -sv ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_mm_master_bfm.sv -L altera_common_sv_packages -work mm_master_bfm_0 
+# -- Compiling module altera_avalon_mm_master_bfm
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# -- Importing package altera_common_sv_packages.avalon_mm_pkg
+# -- Importing package altera_common_sv_packages.avalon_utilities_pkg
+# 
+# Top level modules:
+# 	altera_avalon_mm_master_bfm
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 ahb_master_slave_with_qsys_bfm/simulation/ahb_master_slave_with_qsys_bfm.v 
+# -- Compiling module ahb_master_slave_with_qsys_bfm
+# 
+# Top level modules:
+# 	ahb_master_slave_with_qsys_bfm
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/fifo_w.v 
+# -- Compiling module fifo_w
+# 
+# Top level modules:
+# 	fifo_w
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/fifo_r.v 
+# -- Compiling module fifo_r
+# 
+# Top level modules:
+# 	fifo_r
+# End time: 23:06:47 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:47 on Aug 06,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/user_logic.sv 
+# -- Compiling module user_logic
+# 
+# Top level modules:
+# 	user_logic
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/AHB_write_master.sv 
+# -- Compiling module AHB_write_master
+# 
+# Top level modules:
+# 	AHB_write_master
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/AHB_slave.sv 
+# -- Compiling module AHB_slave
+# 
+# Top level modules:
+# 	AHB_slave
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/AHB_read_master.sv 
+# -- Compiling module AHB_read_master
+# 
+# Top level modules:
+# 	AHB_read_master
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/latency_aware_read_master.sv 
+# -- Compiling module latency_aware_read_master
+# 
+# Top level modules:
+# 	latency_aware_read_master
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test" /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/burst_read_master.sv 
+# -- Compiling module burst_read_master
+# 
+# Top level modules:
+# 	burst_read_master
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv AHB_master_bfm.sv 
+# -- Compiling module AHB_master_bfm
+# 
+# Top level modules:
+# 	AHB_master_bfm
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:48 on Aug 06,2015
+# vlog -reportprogress 300 -sv test_program.sv -L altera_common_sv_packages 
+# -- Compiling module test_program
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# -- Importing package altera_common_sv_packages.avalon_mm_pkg
+# 
+# Top level modules:
+# 	test_program
+# End time: 23:06:48 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 23:06:49 on Aug 06,2015
+# vlog -reportprogress 300 -sv tb.sv 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 23:06:49 on Aug 06,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# [exec] elab_debug
+# vsim -i 
+# Start time: 23:06:49 on Aug 06,2015
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.tb
+# Loading sv_std.std
+# Loading work.tb
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.AHB_master_bfm
+# Loading work.AHB_master_bfm
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.ahb_master_slave_with_qsys_bfm
+# Loading work.ahb_master_slave_with_qsys_bfm
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/mm_master_bfm_0.altera_avalon_mm_master_bfm
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_common_sv_packages.avalon_utilities_pkg
+# Loading altera_common_sv_packages.avalon_utilities_pkg
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_common_sv_packages.avalon_mm_pkg
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_common_sv_packages.verbosity_pkg
+# Loading altera_common_sv_packages.verbosity_pkg
+# Loading altera_common_sv_packages.avalon_mm_pkg
+# Loading mm_master_bfm_0.altera_avalon_mm_master_bfm
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/mm_slave_bfm_0.altera_avalon_mm_slave_bfm
+# Loading mm_slave_bfm_0.altera_avalon_mm_slave_bfm
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/ahb_master_slave_2_0.top_level
+# Loading ahb_master_slave_2_0.top_level
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.AHB_slave
+# Loading work.AHB_slave
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.fifo_w
+# Loading work.fifo_w
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.dcfifo
+# Loading altera_mf_ver.dcfifo
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.dcfifo_mixed_widths
+# Loading altera_mf_ver.dcfifo_mixed_widths
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.dcfifo_low_latency
+# Loading altera_mf_ver.dcfifo_low_latency
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.ALTERA_MF_HINT_EVALUATION
+# Loading altera_mf_ver.ALTERA_MF_HINT_EVALUATION
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.dcfifo_dffpipe
+# Loading altera_mf_ver.dcfifo_dffpipe
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.AHB_read_master
+# Loading work.AHB_read_master
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.fifo_r
+# Loading work.fifo_r
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.AHB_write_master
+# Loading work.AHB_write_master
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.user_logic
+# Loading work.user_logic
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0.avalon_ahb_bridge
+# Loading avalon2ahb_bridge_0.avalon_ahb_bridge
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/ahb2avalon_burst_bridge_0.ahb_avalon_bridge_with_burst
+# Loading ahb2avalon_burst_bridge_0.ahb_avalon_bridge_with_burst
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.burst_read_master
+# Loading work.burst_read_master
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/mm_interconnect_0.ahb_master_slave_with_qsys_bfm_mm_interconnect_0
+# Loading mm_interconnect_0.ahb_master_slave_with_qsys_bfm_mm_interconnect_0
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/mm_master_bfm_0_m0_translator.altera_merlin_master_translator
+# Loading mm_master_bfm_0_m0_translator.altera_merlin_master_translator
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_translator.altera_merlin_slave_translator
+# Loading avalon2ahb_bridge_0_avalon_slave_translator.altera_merlin_slave_translator
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/mm_master_bfm_0_m0_agent.altera_merlin_master_agent
+# Loading mm_master_bfm_0_m0_agent.altera_merlin_master_agent
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_agent.altera_merlin_slave_agent
+# Loading avalon2ahb_bridge_0_avalon_slave_agent.altera_merlin_slave_agent
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_agent.altera_merlin_burst_uncompressor
+# Loading avalon2ahb_bridge_0_avalon_slave_agent.altera_merlin_burst_uncompressor
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo.altera_avalon_sc_fifo
+# Loading avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo.altera_avalon_sc_fifo
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router
+# Loading router.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_default_decode
+# Loading router.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_default_decode
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001
+# Loading router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001_default_decode
+# Loading router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_router_001_default_decode
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/cmd_demux.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_demux
+# Loading cmd_demux.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_demux
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/cmd_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_mux
+# Loading cmd_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_cmd_mux
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/rsp_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_rsp_mux
+# Loading rsp_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_0_rsp_mux
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/mm_interconnect_3.ahb_master_slave_with_qsys_bfm_mm_interconnect_3
+# Loading mm_interconnect_3.ahb_master_slave_with_qsys_bfm_mm_interconnect_3
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router
+# Loading router.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_default_decode
+# Loading router.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_default_decode
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001
+# Loading router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001_default_decode
+# Loading router_001.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_router_001_default_decode
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/cmd_demux.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_demux
+# Loading cmd_demux.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_demux
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/cmd_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_mux
+# Loading cmd_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_cmd_mux
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/rsp_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_rsp_mux
+# Loading rsp_mux.ahb_master_slave_with_qsys_bfm_mm_interconnect_3_rsp_mux
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/rst_controller.altera_reset_controller
+# Loading rst_controller.altera_reset_controller
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/work.test_program
+# Loading work.test_program
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.dcfifo_async
+# Loading altera_mf_ver.dcfifo_async
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/altera_mf_ver.dcfifo_fefifo
+# Loading altera_mf_ver.dcfifo_fefifo
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_13_1
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_13_1
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/rst_controller.altera_reset_synchronizer
+# Loading rst_controller.altera_reset_synchronizer
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_full_13_1
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_full_13_1
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_address_alignment
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_address_alignment
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_burstwrap_increment
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_burstwrap_increment
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_min
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_min
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_subtractor
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_subtractor
+# Refreshing /home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim/libraries/avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_adder
+# Loading avalon2ahb_bridge_0_avalon_slave_burst_adapter.altera_merlin_burst_adapter_adder
+# ** Warning: (vsim-3017) AHB_master_bfm.sv(7): [TFMPC] - Too few port connections. Expected 5, found 2.
+#         Region: /tb/dut/u0
+# ** Warning: (vsim-3722) AHB_master_bfm.sv(7): [TFMPC] - Missing connection for port 'ahb_master_slave_2_0_conduit_end_add_data_sel'.
+# ** Warning: (vsim-3722) AHB_master_bfm.sv(7): [TFMPC] - Missing connection for port 'ahb_master_slave_2_0_conduit_end_display_data'.
+# ** Warning: (vsim-3722) AHB_master_bfm.sv(7): [TFMPC] - Missing connection for port 'ahb_master_slave_2_0_conduit_end_rdwr_address'.
+# ** Warning: (vsim-3017) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(86): [TFMPC] - Too few port connections. Expected 24, found 20.
+#         Region: /tb/dut/u0/ahb_master_slave_2_0/slave_1
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(86): [TFMPC] - Missing connection for port 'HREADY'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(86): [TFMPC] - Missing connection for port 'w_fifo_write_enable'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(86): [TFMPC] - Missing connection for port 'w_fifo_write_data'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(86): [TFMPC] - Missing connection for port 'w_fifo_full'.
+# ** Warning: (vsim-3017) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(112): [TFMPC] - Too few port connections. Expected 23, found 21.
+#         Region: /tb/dut/u0/ahb_master_slave_2_0/custom_1
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(112): [TFMPC] - Missing connection for port 'abort'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(112): [TFMPC] - Missing connection for port 'HREADYIN'.
+# ** Warning: (vsim-3017) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(136): [TFMPC] - Too few port connections. Expected 23, found 20.
+#         Region: /tb/dut/u0/ahb_master_slave_2_0/custom_2
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(136): [TFMPC] - Missing connection for port 'abort'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(136): [TFMPC] - Missing connection for port 'HSEL'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(136): [TFMPC] - Missing connection for port 'HREADYIN'.
+# ** Warning: (vsim-3017) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(159): [TFMPC] - Too few port connections. Expected 30, found 28.
+#         Region: /tb/dut/u0/ahb_master_slave_2_0/inst_1
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(159): [TFMPC] - Missing connection for port 'write_abort'.
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/top_level.sv(159): [TFMPC] - Missing connection for port 'read_abort'.
+# ** Warning: (vsim-3017) ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv(235): [TFMPC] - Too few port connections. Expected 15, found 14.
+#         Region: /tb/dut/u0/ahb2avalon_burst_bridge_0/burst_r_master
+# ** Warning: (vsim-3722) ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv(235): [TFMPC] - Missing connection for port 'control_early_done'.
+add wave -position insertpoint  \
+sim:/tb/dut/u0/ahb_master_slave_2_0/inst_1/start_run
+add wave -position insertpoint  \
+sim:/tb/dut/u0/ahb_master_slave_2_0/inst_1/stop_run
+add wave -position insertpoint  \
+sim:/tb/dut/u0/ahb_master_slave_2_0/HCLK
+add wave -position insertpoint  \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HADDR \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HBURST \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HPROT \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HRDATA \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HREADY \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HREADYIN \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HRESP \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HSEL \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HSIZE \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HTRANS \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HWDATA \
+sim:/tb/dut/u0/ahb_master_slave_2_0/master_HWRITE
+run 1000 ns
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: - Hello from altera_avalon_mm_master_bfm
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   $Revision: #1 $
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   $Date: 2014/02/16 $
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_ADDRESS_W             = 32
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_SYMBOL_W              = 8
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_NUMSYMBOLS            = 4
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_BURSTCOUNT_W          = 3
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   REGISTER_WAITREQUEST     = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_FIX_READ_LATENCY      = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_MAX_PENDING_READS     = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   AV_MAX_PENDING_WRITES    = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_READ                 = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_WRITE                = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_ADDRESS              = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_BYTE_ENABLE          = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_BURSTCOUNT           = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_READ_DATA            = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_READ_DATA_VALID      = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_WRITE_DATA           = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_BEGIN_TRANSFER       = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_BEGIN_BURST_TRANSFER = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_WAIT_REQUEST         = 1
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_LOCK                 = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_DEBUGACCESS          = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_TRANSACTIONID        = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_WRITERESPONSE        = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_READRESPONSE         = 0
+#                    0: INFO: tb.dut.u0.mm_master_bfm_0.__hello: -   USE_CLKEN                = 0
+#                    0: INFO: ------------------------------------------------------------
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: - Hello from altera_avalon_mm_slave_bfm
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   $Revision: #1 $
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   $Date: 2014/02/16 $
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_ADDRESS_W             = 5
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_SYMBOL_W              = 8
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_NUMSYMBOLS            = 4
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_BURSTCOUNT_W          = 4
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   REGISTER_WAITREQUEST     = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_FIX_READ_LATENCY      = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_MAX_PENDING_READS     = 32
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_MAX_PENDING_WRITES    = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_READ_WAIT_TIME        = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   AV_WRITE_WAIT_TIME       = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_READ                 = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_WRITE                = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_ADDRESS              = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_BYTE_ENABLE          = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_BURSTCOUNT           = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_READ_DATA            = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_READ_DATA_VALID      = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_WRITE_DATA           = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_BEGIN_TRANSFER       = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_BEGIN_BURST_TRANSFER = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_WAIT_REQUEST         = 1
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_LOCK                 = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_DEBUGACCESS          = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_TRANSACTIONID        = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_WRITERESPONSE        = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_READRESPONSE         = 0
+#                    0: INFO: tb.dut.u0.mm_slave_bfm_0.__hello: -   USE_CLKEN                = 0
+#                    0: INFO: ------------------------------------------------------------
+#                    0:  verbosity_pkg.set_verbosity: Setting Verbosity level=4 (VERBOSITY_INFO)
+# master send out write command: address 8
+# master send out write command: address 12
+# master send out write command: address 16
+# master send out write command: address 20
+# master send out write command: address 24
+# master send out write command: address 28
+# master send out start_run write command: address 0
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000000, 1111f000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000001, 2222f000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000002, 3333f000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000003, 4444f000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000004, 5555f000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000005, 6666f000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000006, 00000000)
+# command received signalled
+# slave cmd was a write: (burstcount, address, data) => (1, 00000007, 00000000)
+# master send out stOP_run write command: address 0
+# Master has sent out all command
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000000, 1111f000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000001, 2222f000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000002, 3333f000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000003, 4444f000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000004, 5555f000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000005, 6666f000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000006, 00000000)
+# command received signalled
+# slave cmd was a read: (burscount, address, data) => (1, 00000007, 00000000)
+quit
+# End time: 23:10:17 on Aug 06,2015, Elapsed time: 0:03:28
+# Errors: 0, Warnings: 22

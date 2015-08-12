@@ -1,0 +1,179 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/simulation/modelsim
+vAHB_master_bfm
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+ITgG`BO8U03D0fcEKE<SJY0
+VV;CNYN<PJo[Q?:m:ICck[2
+S1
+Z2 d/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/simulation/modelsim
+w1437504347
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_master_bfm.sv
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_master_bfm.sv
+L0 2
+Z3 OL;L;10.1b;51
+r1
+31
+Z4 o-sv -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s92 -sv -work work +incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@a@h@b_master_bfm
+!i10b 1
+!s100 X7IC:?z48U_hcAl1gXUfD2
+!s105 AHB_master_bfm_sv_unit
+!s85 0
+!s108 1439231972.900780
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_master_bfm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_master_bfm.sv|
+vAHB_read_master
+R1
+!i10b 1
+!s100 NYCJG[lkijmTX:;NXB<k91
+ILX`HXfm3e_S<HZUPGQGoh3
+VLHHk_AYIY89:=H^?<icP11
+!s105 AHB_read_master_sv_unit
+S1
+R2
+w1439228213
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_read_master.sv
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_read_master.sv
+L0 11
+R3
+r1
+!s85 0
+31
+!s108 1439231973.181567
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_read_master.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_read_master.sv|
+R4
+R5
+n@a@h@b_read_master
+vAHB_slave
+R1
+I31V3<JY2fO9gln76T_n:22
+VMGKV4IU?W2WjQNBMEm?Hj3
+S1
+R2
+w1439226803
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_slave.sv
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_slave.sv
+L0 8
+R3
+r1
+31
+R4
+R5
+n@a@h@b_slave
+!i10b 1
+!s100 RIX5k<bfGMiAlKcQHigOK3
+!s105 AHB_slave_sv_unit
+!s85 0
+!s108 1439231973.109942
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_slave.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_slave.sv|
+vAHB_write_master
+R1
+Ij4hVaA[RPdz2Ye7BVi_W=2
+V0NKfGbJ6Q5l7aPmY2Q67z2
+S1
+R2
+w1439231696
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_write_master.sv
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_write_master.sv
+L0 11
+R3
+r1
+31
+R4
+R5
+n@a@h@b_write_master
+!i10b 1
+!s100 WSiz`9AeoFzQ26UajNG<j3
+!s105 AHB_write_master_sv_unit
+!s85 0
+!s108 1439231973.039665
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_write_master.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/AHB_write_master.sv|
+vburst_read_master
+R1
+I[DHUh_fl@n];mUUiOzOD[3
+Vefn9GcTHGDVfbO`=<i:8m3
+S1
+R2
+w1438487465
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/burst_read_master.sv
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/burst_read_master.sv
+L0 36
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 =FBW^cO]H[l4LeVjOe5NV1
+!s105 burst_read_master_sv_unit
+!s85 0
+!s108 1439231972.828395
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/burst_read_master.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/burst_read_master.sv|
+vfifo_r
+ISO:R7N9IlXMRZ7QB4kcf03
+VcWi]I8Z77>em;cc0nLIS91
+R2
+w1438479687
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_r.v
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_r.v
+L0 40
+R3
+r1
+31
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z7 !s92 -vlog01compat -work work +incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 k9^`b2L;e3R<97Sm[E9oF3
+!s85 0
+!s108 1439231971.944072
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_r.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_r.v|
+vfifo_w
+IODzUf<hfk@hUVG`_KLJ8T3
+VOc]_O1oo=PT3FYHdRbc<W2
+R2
+w1438480268
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_w.v
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_w.v
+L0 40
+R3
+r1
+31
+R6
+R7
+!i10b 1
+!s100 oNog`l;852V8IUGmiEM2G0
+!s85 0
+!s108 1439231971.867465
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_w.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/fifo_w.v|
+vuser_logic
+R1
+I0Gk91;ckDeMSRVD8fGl7g3
+V0eV_i0gWn=n5md7=;cm>a1
+S1
+R2
+w1439229853
+8/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/user_logic.sv
+F/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/user_logic.sv
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 TL0@EG0^fV<Ym[>Z85hTG3
+!s105 user_logic_sv_unit
+!s85 0
+!s108 1439231972.967318
+!s107 /home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/user_logic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim|/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/user_logic.sv|

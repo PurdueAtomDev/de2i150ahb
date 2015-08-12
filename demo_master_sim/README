@@ -1,0 +1,24 @@
+*******************************************************************************
+	README - Brief description of the directory layout and files needed
+*******************************************************************************
+
+
+This directory has the following layout :
+
+./
+	ahb_master_slave_with_qsys_bfm	- Synthesis/Simulation files for Qsys module. Needs to be a part of your quartus project.
+
+./simulation/modelsim    (this will be the directory where you invoke the Modelsim to load the demo simulation)
+
+1. ahb_master_slave_with_qsys_bfm - Qsys design files folder copied from the root project folder. This one will be replaced when you test your own designs.
+2. AHB_master_bfm.sv  	- Top level netlist (FPGA wrapper)
+3. AHB_read_master.sv  AHB_write_master.sv   AHB_slave.sv      - AHB interface IPs we created, normally you should not change these files.
+
+4. fifo_r.v   fifo_w.v    - FIFO wrappers of Altera FIFO IP. You should not change them.
+5. burst_read_master.sv   - Altera Avalon read master IP, used in AHB to Avalon bridge designs. Should not be changed.
+6. user_logic.sv          - User logic module. This one will be replaced by your own design.
+7. tb.sv                  - top level test bench you will simulate in Modelsim.
+8. test_program.sv        - actual test cases tb.sv will simulate. You should customize it for your testing.
+9. run_simulation.tcl     - script to load when you simulate in Modelsim, you may need to change it.
+
+In case of any questions/bugs please feel free to contact de2i150.purdue@gmail.com

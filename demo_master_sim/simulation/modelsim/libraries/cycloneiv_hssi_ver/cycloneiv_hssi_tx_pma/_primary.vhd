@@ -1,0 +1,66 @@
+library verilog;
+use verilog.vl_types.all;
+entity cycloneiv_hssi_tx_pma is
+    generic(
+        lpm_type        : string  := "cycloneiv_hssi_tx_pma";
+        channel_number  : integer := 0;
+        common_mode     : string  := "0.65V";
+        dprio_config_mode: vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        enable_diagnostic_loopback: string  := "false";
+        enable_reverse_serial_loopback: string  := "false";
+        enable_txclkout_loopback: string  := "false";
+        preemp_tap_1    : integer := 0;
+        protocol_hint   : string  := "basic";
+        effective_data_rate: string  := "unused";
+        logical_channel_address: integer := 0;
+        rx_detect       : integer := 0;
+        serialization_factor: integer := 8;
+        slew_rate       : string  := "low";
+        termination     : string  := "OCT 100 Ohms";
+        use_external_termination: string  := "false";
+        use_rx_detect   : string  := "false";
+        vod_selection   : integer := 0
+    );
+    port(
+        cgbpowerdn      : in     vl_logic;
+        datain          : in     vl_logic_vector(9 downto 0);
+        dpriodisable    : in     vl_logic;
+        dprioin         : in     vl_logic_vector(299 downto 0);
+        detectrxpowerdown: in     vl_logic;
+        diagnosticlpbkin: in     vl_logic;
+        fastrefclk0in   : in     vl_logic;
+        forceelecidle   : in     vl_logic;
+        powerdn         : in     vl_logic;
+        refclk0in       : in     vl_logic;
+        refclk0inpulse  : in     vl_logic;
+        reverselpbkin   : in     vl_logic;
+        rxdetectclk     : in     vl_logic;
+        rxdetecten      : in     vl_logic;
+        txpmareset      : in     vl_logic;
+        clockout        : out    vl_logic;
+        dataout         : out    vl_logic;
+        dprioout        : out    vl_logic_vector(299 downto 0);
+        rxdetectvalidout: out    vl_logic;
+        rxfoundout      : out    vl_logic;
+        seriallpbkout   : out    vl_logic
+    );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of lpm_type : constant is 1;
+    attribute mti_svvh_generic_type of channel_number : constant is 1;
+    attribute mti_svvh_generic_type of common_mode : constant is 1;
+    attribute mti_svvh_generic_type of dprio_config_mode : constant is 1;
+    attribute mti_svvh_generic_type of enable_diagnostic_loopback : constant is 1;
+    attribute mti_svvh_generic_type of enable_reverse_serial_loopback : constant is 1;
+    attribute mti_svvh_generic_type of enable_txclkout_loopback : constant is 1;
+    attribute mti_svvh_generic_type of preemp_tap_1 : constant is 1;
+    attribute mti_svvh_generic_type of protocol_hint : constant is 1;
+    attribute mti_svvh_generic_type of effective_data_rate : constant is 1;
+    attribute mti_svvh_generic_type of logical_channel_address : constant is 1;
+    attribute mti_svvh_generic_type of rx_detect : constant is 1;
+    attribute mti_svvh_generic_type of serialization_factor : constant is 1;
+    attribute mti_svvh_generic_type of slew_rate : constant is 1;
+    attribute mti_svvh_generic_type of termination : constant is 1;
+    attribute mti_svvh_generic_type of use_external_termination : constant is 1;
+    attribute mti_svvh_generic_type of use_rx_detect : constant is 1;
+    attribute mti_svvh_generic_type of vod_selection : constant is 1;
+end cycloneiv_hssi_tx_pma;

@@ -1,0 +1,48 @@
+library verilog;
+use verilog.vl_types.all;
+entity cycloneiv_hssi_cmu_quad_reset is
+    port(
+        entest          : in     vl_logic;
+        plniotri        : in     vl_logic;
+        npor            : in     vl_logic;
+        frzreg          : in     vl_logic;
+        pllurst         : in     vl_logic;
+        rpllurst        : in     vl_logic;
+        rpowerdown      : in     vl_logic;
+        rreset          : in     vl_logic;
+        rxurstcmu       : in     vl_logic_vector(1 downto 0);
+        rrxurstcmu      : in     vl_logic_vector(1 downto 0);
+        rrx_cmu_rst     : in     vl_logic_vector(1 downto 0);
+        ucmurx_pdb      : in     vl_logic_vector(1 downto 0);
+        rclk_pdb        : in     vl_logic_vector(1 downto 0);
+        rcmu_powdnr     : in     vl_logic_vector(1 downto 0);
+        rcmu_cru_pdb    : in     vl_logic_vector(1 downto 0);
+        rcmu_urx_pdb    : in     vl_logic_vector(1 downto 0);
+        rcmu_rx_ib_pdb  : in     vl_logic_vector(1 downto 0);
+        rcmu_powdnt     : in     vl_logic_vector(1 downto 0);
+        rcmu_tx_ob_pdb  : in     vl_logic_vector(1 downto 0);
+        rcmu_tx_cgb_pdb : in     vl_logic_vector(1 downto 0);
+        rcmu_rx_det_pdb : in     vl_logic_vector(1 downto 0);
+        cmu0_rxpma_rstb : out    vl_logic;
+        cmu0_txpma_rstb : out    vl_logic;
+        cmu0_cru_rstb   : out    vl_logic;
+        cmu1_rxpma_rstb : out    vl_logic;
+        cmu1_txpma_rstb : out    vl_logic;
+        cmu1_cru_rstb   : out    vl_logic;
+        cmu0_rx_pdb     : out    vl_logic;
+        cmu0_cru_pdb    : out    vl_logic;
+        cmu0_clk_pdb    : out    vl_logic;
+        cmu0_tx_pdb     : out    vl_logic;
+        cmu0_cgb_pdb    : out    vl_logic;
+        cmu0_rx_det_pdb : out    vl_logic;
+        cmu1_rx_pdb     : out    vl_logic;
+        cmu1_cru_pdb    : out    vl_logic;
+        cmu1_clk_pdb    : out    vl_logic;
+        cmu1_tx_pdb     : out    vl_logic;
+        cmu1_cgb_pdb    : out    vl_logic;
+        cmu1_rx_det_pdb : out    vl_logic;
+        mdio_rst        : out    vl_logic;
+        hard_reset      : out    vl_logic;
+        soft_reset_all_hssi: out    vl_logic
+    );
+end cycloneiv_hssi_cmu_quad_reset;

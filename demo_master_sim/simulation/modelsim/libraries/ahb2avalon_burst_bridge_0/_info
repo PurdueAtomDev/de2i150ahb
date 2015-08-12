@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+d/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/bfm_test/simulation/modelsim
+vahb_avalon_bridge_with_burst
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+VHih=fkRKO8cblC<7?_f=L2
+r1
+!s85 0
+31
+If=kFno2am:GzB@nY^C:0U0
+S1
+d/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/simulation/modelsim
+w1439231078
+8ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv
+Fahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv
+L0 4
+Z0 OL;L;10.1b;51
+o-sv -L altera_common_sv_packages -work ahb2avalon_burst_bridge_0 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 h6E8:6Mk?C^`]ZHEgGA540
+!s105 ahb_avalon_bridge_with_burst_sv_unit
+!s108 1439232356.770132
+!s107 ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv|
+!s90 -reportprogress|300|-sv|ahb_master_slave_with_qsys_bfm/simulation/submodules/ahb_avalon_bridge_with_burst.sv|-L|altera_common_sv_packages|-work|ahb2avalon_burst_bridge_0|

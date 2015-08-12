@@ -1,0 +1,23 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegridfs/a/mg196/Desktop/de2i150_amba/AHB_master_2_demo/simulation/modelsim
+valtera_avalon_sc_fifo
+!i10b 1
+VjOzUMS5nAQIa6?lLKEfID0
+r1
+!s85 0
+31
+I<k@SJ9[^Jh;VVY5PY_F=e3
+d/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_master_sim/simulation/modelsim
+w1439231079
+8ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_sc_fifo.v
+Fahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_sc_fifo.v
+L0 21
+OL;L;10.1b;51
+o-work avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 NYC@9JlQGe2Sf:<h15;Be3
+!s108 1439232355.913752
+!s107 ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|ahb_master_slave_with_qsys_bfm/simulation/submodules/altera_avalon_sc_fifo.v|-work|avalon2ahb_bridge_0_avalon_slave_agent_rsp_fifo|
