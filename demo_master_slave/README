@@ -1,0 +1,32 @@
+*******************************************************************************
+	README - Brief description of the directory layout and files needed
+*******************************************************************************
+
+
+This directory has the following layout :
+
+./
+	ahb_master_slave_with_pcie	- Synthesis/Simulation files for Qsys module. Needs to be a part of your quartus project.
+	AHB_master_slave_app		- contains app.c, the Software to use your FPGA design
+	<bunch of other files>		- Explained below
+
+<bunch of other files>
+1. EP4CGX150DF31.qsf 	- This is a pin assignment file to be used in your
+quartus project.  Very imporant file.
+2. SEG_HEX.v	    	- LCD Design file, should not be changed.
+3. ahb_master_slave_with_pcie.qsys - Qsys file you will need to load when open the Qsys tool.
+4. master_example.qpf 	- This is the main Quartus Project File. 
+5. master_example.sdc 	- Design Contraints file for timing analysis in Quartus.
+6. master_example.sv  	- Top level netlist (FPGA wrapper)
+7. AHB_read_master.sv  AHB_write_master.sv   AHB_slave.sv      - AHB interface IPs we created, normally you should not change these files.
+
+8. fifo_r.v   fifo_w.v    - FIFO wrappers of Altera FIFO IP. You should not change them.
+9. burst_read_master.sv   - Altera Avalon read master IP, used in AHB to Avalon bridge designs. Should not be changed.
+10. ahb_avalon_bridge_with_burst.sv  avalon_ahb_bridge.sv    - Bridge design files we created to connect your AHB components to Avalon bus in the Qsys integration. They should not be changed.
+
+11. user_logic.sv          - User logic module. This one will be replaced by your own design.
+12. top_level.sv           - the top level file thats connects your user_logic to the AHB interfaces. This file will be the module dropped in the Qsys. You will need to change it when do your design integration.
+
+13. stp1.stp               - the SignalTap file you need to do the real-time debugging. You can access it in the Project Navigator.
+
+In case of any questions/bugs please feel free to contact de2i150.purdue@gmail.com
