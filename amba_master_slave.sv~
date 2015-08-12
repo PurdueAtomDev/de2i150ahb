@@ -1,0 +1,186 @@
+// $Id: $
+// File name:	custom_master_slave.sv
+// Created: 	5/28/2015
+// Author: 	Nianpei Deng
+// Version: 	1.0 Initial Design Entry
+// custom_master_slave module : Acts as an AMBA master and slave to receive input commands from PCIE IP and writes data into the RAM
+
+module custom_master_slave 
+#(
+    //parameter MASTER_ADDRESSWIDTH = 26,  	// ADDRESSWIDTH specifies how many addresses the Master can address 
+    parameter SLAVE_ADDRESSWIDTH = 3,  	// ADDRESSWIDTH specifies how many addresses the slave needs to be mapped to. log(NUMREGS)
+    parameter DATAWIDTH = 32,    		// DATAWIDTH specifies the data width. Default 32 bits
+    parameter NUMREGS = 8,       		// Number of Internal Registers for Custom Logic
+    parameter REGWIDTH = 32       		// Data Width for the Internal Registers. Default 32 bits
+)
+(
+    input logic 		 clk,
+    input logic 		 reset_n,
+
+    //Interface to Top Level
+    input logic 		 rdwr_cntl,
+    input logic 		 n_action,
+    input logic 		 add_data_sel,
+    input logic [31:0] 		 rdwr_address,
+    output logic [DATAWIDTH-1:0] display_data,
+
+    //Bus Slave Interface
+    input logic 		 HSEL,
+    input logic [31:0] 		 slave_HADDR,
+    input logic 		 slave_HWRITE,
+    input logic [2:0] slave_HSIZE,
+    input logic [2:0] slave_HBURST,
+    input logic [3:0] slave_HPORT,
+    input logic [1:0] slave_HTRANS,
+    input logic 		 slave_HREADY,
+    input logic [31:0] 		 slave_HWDATA,
+    output logic 		 slave_HREADYOUT,
+    output logic [1:0] slave_HRESP,
+    output logic [31:0] 	 slave_HRDATA,
+			     
+    //Bus Master Interface
+    input logic 		 master_HREADY,
+    //input logic master_HRESP,
+    input logic [31:0] 		 master_HRDATA,
+    output logic [31:0] 	 master_HADDR,
+    output logic 		 master_HWRITE,
+    //output logic [2:0] master_HSIZE,
+    //output logic [2:0] master_HBURST,
+    //output logic [3:0] master_HPORT,
+    //output logic [1:0] master_HTRANS,
+    output logic [31:0] 	 master_HWDATA
+ );
+
+   parameter START_BYTE = 32'hF00BF00B;
+   parameter STOP_BYTE = 32'hDEADF00B;
+   parameter SDRAM_ADDR = 32'h08000000;
+   
+   logic [NUMREGS-1:0][REGWIDTH-1:0] csr_registers;
+   logic [NUMREGS-1:0][REGWIDTH-1:0] read_data_registers;
+   logic [31:0] 		     slave_addr_reg;
+   logic 			     slave_hwrite_reg;
+   logic [31:0] 		     address, nextAddress;
+   logic [SLAVE_ADDRESSWIDTH:0]      reg_index, next_reg_index;
+   logic 			     new_data_flag;
+   logic [31:0] 		     slave_word_addr;
+   
+   typedef enum 		     {IDLE, WRITE, WRITE_WAIT, READ_REQ, READ_WAIT, READ_ACK, READ_DATA} state_t;
+   state_t state, nextState;
+
+   assign display_data = add_data_sel ? read_data_registers[rdwr_address[3:0]] : address;
+   
+   //slave
+   always_ff @ (posedge clk, negedge reset_n) begin
+      if (!reset_n)
+	begin
+	   slave_HREADYOUT <= 1'b1;
+	   //slave_HRESP <= 1'b0;
+	   csr_registers <= '0;
+	   
+	   slave_addr_reg <= 32'b0;
+	   slave_hwrite_reg <= 1'b0;
+	   //HSEL_reg <= 1'b0;
+	end
+      else
+	begin
+	   slave_addr_reg <= slave_HADDR;
+	   slave_hwrite_reg <= slave_HWRITE;
+	   //HSEL_reg <= HSEL;
+	   if (slave_hwrite_reg && (slave_addr_reg >= 0) && (slave_addr_reg < NUMREGS))
+	     begin
+		csr_registers[slave_addr_reg] <= slave_HWDATA;
+	     end
+	end
+   end // always_ff @
+   //slave output logic
+   assign slave_HRDATA = (!slave_hwrite_reg && (slave_addr_reg >= 0) && (slave_addr_reg < NUMREGS)) ? csr_registers[slave_addr_reg] : 32'b0;
+   //address translation
+   //assign slave_word_addr = (slave_HADDR >> 2);
+
+   //master
+   always_ff @ (posedge clk, negedge reset_n) begin
+      if (!reset_n) begin
+	 address <= SDRAM_ADDR;
+	 reg_index <= 0;
+	 state <= IDLE;
+	 
+	 master_HWDATA <= 32'h0;
+      end
+      else begin
+	 address <= nextAddress;
+	 reg_index <= next_reg_index;
+	 state <= nextState;
+	 
+	 if (master_HWRITE && master_HREADY) begin
+	    master_HWDATA <= csr_registers[reg_index];
+	 end
+	 
+	 if (new_data_flag) begin
+	    read_data_registers[reg_index] <= master_HRDATA;
+	 end
+      end // else: !if(!reset_n)
+   end // always_ff @
+
+   //master next state logic
+   always_comb begin
+      nextAddress = address;
+      next_reg_index = reg_index;
+      nextState = state;
+      new_data_flag = 1'b0;
+      case (state)
+	IDLE: begin
+           if (csr_registers[0] == START_BYTE && reg_index < NUMREGS) begin
+	      nextState = WRITE;
+	   end
+	   else if (csr_registers[0] == STOP_BYTE && address >= SDRAM_ADDR) begin
+	      nextState = READ_REQ;
+	      if (reg_index >= NUMREGS) begin
+	       	 next_reg_index = reg_index - 1;
+		 nextAddress = address - 4;
+	      end
+	   end	   
+       	end 
+       	WRITE: begin
+      	   if (master_HREADY) begin
+	      next_reg_index = reg_index + 1;
+	      nextAddress = address + 4;
+	      nextState = IDLE;
+	   end
+	end 
+       	READ_REQ : begin
+	   if (master_HREADY) begin
+	      nextState = READ_DATA;
+       	      nextAddress = address - 4;	
+	   end
+	end
+        READ_DATA : begin
+	   if (master_HREADY) begin
+       	      nextState = IDLE;
+	      next_reg_index = reg_index - 1;
+       	      new_data_flag = 1;
+	   end
+	end
+      endcase // case (state)
+   end // always_comb
+
+   //master output logic  
+   always_comb begin
+      master_HWRITE = 1'b0;
+      master_HADDR = 32'hbad1bad1;
+      case(state) 
+	WRITE: begin 
+       	   master_HWRITE = 1'b1;
+	   master_HADDR = address;
+	end 
+	READ_REQ: begin 
+	   master_HADDR = address;	
+	end
+      endcase
+   end  
+
+endmodule
+ 
+   
+	   
+      
+	   

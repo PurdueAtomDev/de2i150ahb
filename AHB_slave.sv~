@@ -1,0 +1,190 @@
+// $Id: $
+// File name:	ahb_master_slave.sv
+// Created: 	6/12/2015
+// Author: 	Nianpei Deng
+// Version: 	1.0 Initial Design Entry
+// ahb_master_slave module : Acts as an AMBA master and slave to receive input commands from PCIE IP and writes data into the SDRAM
+
+module ahb_master_slave 
+#(
+    parameter ADDRESSWIDTH = 32,
+    parameter DATAWIDTH = 32,    		// DATAWIDTH specifies the data width. Default 32 bits
+    parameter NUMREGS = 8,       		// Number of Internal Registers for Custom Logic
+    parameter REGWIDTH = 32       		// Data Width for the Internal Registers. Default 32 bits
+)
+(
+ input logic 			clk,
+ input logic 			reset_n,
+
+    //Interface to Top Level
+ input logic 			add_data_sel,
+ input logic [ADDRESSWIDTH-1:0] rdwr_address,
+ output logic [DATAWIDTH-1:0] 	display_data,
+
+    //Bus Slave Interface
+ input logic 			HSEL,
+ input logic [ADDRESSWIDTH-1:0] HADDR,
+ input logic 			HWRITE,
+ input logic [2:0] 		HSIZE,
+ input logic [2:0] 		HBURST,
+ input logic [3:0] 		HPROT,
+ input logic [1:0] 		HTRANS,
+ input logic 			HREADY,
+ input logic [DATAWIDTH-1:0] 	HWDATA,
+ output logic 			HREADYOUT,
+ output logic 			HRESP,
+ output logic [DATAWIDTH-1:0] 	HRDATA,
+			     
+    //User Logic Interface
+ input logic 			w_fifo_write_enable,
+ input logic [DATAWIDTH-1:0] 	w_fifo_write_data,
+ output logic 			w_fifo_full,
+ input logic 			r_fifo_read_enable,
+ output logic [DATAWIDTH-1:0] 	r_fifo_read_data,
+ output logic 			r_fifo_empty,
+         //for user random read access
+ input logic [ADDRESSWIDTH-1:0] u_addr,
+ output logic [DATAWIDTH-1:0] 	u_read_data
+
+ );
+
+   
+   
+   logic [REGWIDTH/4-1:0] csr_registers [NUMREGS-1:0][3:0]; //command registers of the slave
+   logic [ADDRESSWIDTH-3:0] addr_reg; //register the slave haddr
+   logic [ADDRESSWIDTH-3:0] word_addr;
+   logic 		    hwrite_reg; //register the slave hwrite
+   logic 		    buffer_write_reg, buffer_write;
+   logic 		    buffer_read_reg, buffer_read;
+   logic [2:0]		    hsize_reg;
+   logic [1:0]		    htrans_reg;
+   logic 		    error_reg, error;
+   logic 		    r_fifo_write_enable;
+   logic 		    r_fifo_full;
+   logic [DATAWIDTH-1:0]    r_fifo_write_data;
+   logic 		    w_fifo_read_enable;
+   logic 		    w_fifo_empty;
+   logic [DATAWIDTH-1:0]    w_fifo_read_data;  
+   
+
+
+   //display read data registers on board LCDs
+   assign display_data = add_data_sel ? csr_registers[rdwr_address[4:0] ] : 1;
+
+   //address decode
+   assign word_addr = HADDR >> 2;
+   assign error = ((HADDR[1:0] == 2'b00) & (word_addr < NUMREGS) & (word_addr >= 0)) ? 0 : 1; 
+   assign buffer_write = HWRITE & ((HTRANS == 2'b10) || (HTRANS == 2'b11)) & (word_addr == 0);
+   assign buffer_read = (~HWRITE) & ((HTRANS == 2'b10) || (HTRANS == 2'b11)) & (word_addr == NUMREGS-1);
+   
+   
+   //registering buffer_read, buffer_write, word_addr, control signals
+   always_ff @ (posedge clk, negedge reset_n) begin
+      if (!reset_n)
+	begin
+	   addr_reg <= 32'b0;
+	   hwrite_reg <= 1'b0;
+	   buffer_write_reg <= 1'b0;
+	   buffer_read_reg <= 1'b0;
+	   hsize_reg <= 3'b10;
+	   htrans_reg <= 2'b00;
+	   error_reg <= 1'b0;
+	end
+      else
+	begin
+	   //register the address and hwrite signals as data phase is after the address phase
+	   //write operations
+	   if (HREADYOUT) begin
+	      addr_reg <= word_addr;
+	      hwrite_reg <= HWRITE;
+	      buffer_write_reg <= buffer_write;
+	      buffer_read_reg <= buffer_read;
+	      hsize_reg <= HSIZE;
+	      htrans_reg <= HTRANS;
+	      error_reg <= error;
+	   end
+	end
+   end
+
+   //slave write operation
+   assign r_fifo_write_enable = (buffer_write_reg & (!r_fifo_full)) ? 1'b1 : 1'b0;
+   assign r_fifo_write_data = HWDATA;
+   assign HREADYOUT = ((buffer_write_reg & r_fifo_full) || (buffer_read_reg & w_fifo_empty)) ? 1'b0 : 1'b1;
+   assign HRESP = error;
+   
+   always_ff @ (posedge clk, negedge reset_n) begin
+      if (!reset_n)
+	begin
+	   csr_registers <= '0;
+	end
+      else
+	begin
+	   //register the address and hwrite signals as data phase is after the address phase
+	   //write operations
+	   if (hwrite_reg & (!error_reg) & ((htrans_reg == 2'b10) || (htrans_reg == 2'b11)))
+	     begin
+		if (hsize_reg == 3'b10) begin
+		   csr_registers[addr_reg] <= HWDATA;
+		end
+		if (hsize_reg == 3'b01) begin
+		   csr_registers[addr_reg][1:0] <= HWDATA;
+		end
+		if (hsize_reg == 3'b00) begin
+		   csr_registers[addr_reg][0] <= HWDATA;
+		end
+	     end
+	end
+   end
+   
+   //slave read operation
+   always_comb begin
+      HRDATA = 0;
+      w_fifo_read_enable = 1'b0;
+      if (buffer_read_reg) begin
+	 if (!w_fifo_empty) begin
+	    HRDATA = w_fifo_read_data;
+	    w_fifo_read_enable = 1'b1;
+	 end
+      end
+      else begin
+	 if ((!hwrite_reg) & (!error_reg) & ((htrans_reg == 2'b10) || (htrans_reg == 2'b11))) begin
+	    HRDATA = csr_registers[addr_reg];
+	 end
+      end
+   end
+
+   //user read operation
+   assign u_read_data = csr_registers[u_addr];
+
+   //FIFO instantiation
+   fifo r_fifo (
+		.r_clk(clk),
+		.w_clk(clk),
+		.n_rst(reset_n),
+		.r_enable(r_fifo_read_enable),
+		.w_enable(r_fifo_write_enable),
+		.w_data(r_fifo_write_data),
+		.r_data(r_fifo_read_data),
+		.empty(r_fifo_empty),
+		.full(r_fifo_full)
+		);
+
+   fifo w_fifo (
+	       	.r_clk(clk),
+		.w_clk(clk),
+		.n_rst(reset_n),
+		.r_enable(w_fifo_read_enable),
+		.w_enable(w_fifo_write_enable),
+		.w_data(w_fifo_write_data),
+		.r_data(w_fifo_read_data),
+		.empty(w_fifo_empty),
+		.full(w_fifo_full)
+		);
+
+     
+endmodule
+ 
+   
+	   
+      
+	   

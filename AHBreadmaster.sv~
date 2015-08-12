@@ -1,0 +1,7 @@
+//File name: AHBreadmaster.sv
+//Created:   7/12/2015
+//Author:    Nianpei Deng
+//Version:   1.0
+/*Description: This module is modified from the Avalon read master template so that it has AHB master interface.
+To understand its usage and connections to your user modules, please refer to https://www.altera.com/support/support-resources/design-examples/intellectual-property/embedded/nios-ii/exm-avalon-mm.html
+*/
