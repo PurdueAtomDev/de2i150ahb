@@ -1,0 +1,75 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vlog user_logic.sv
+# QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+# Start time: 11:38:11 on Aug 10,2015
+# vlog -reportprogress 300 user_logic.sv 
+# -- Compiling module user_logic
+# 
+# Top level modules:
+# 	user_logic
+# End time: 11:38:11 on Aug 10,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -L altera_mf_ver -voptargs=+acc work.top_level
+# vsim -i 
+# Start time: 11:38:24 on Aug 10,2015
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "user_logic(fast)".
+# ** Warning: top_level.sv(44): (vopt-2685) [TFMPC] - Too few port connections for 'master_1'.  Expected 15, found 13.
+# ** Warning: top_level.sv(44): (vopt-2718) [TFMPC] - Missing connection for port 'HLOCK'.
+# ** Warning: top_level.sv(44): (vopt-2718) [TFMPC] - Missing connection for port 'HBUSREQ'.
+# ** Warning: top_level.sv(62): (vopt-2685) [TFMPC] - Too few port connections for 'custom_1'.  Expected 24, found 23.
+# ** Warning: top_level.sv(62): (vopt-2718) [TFMPC] - Missing connection for port 'HREADY'.
+# Loading sv_std.std
+# Loading work.top_level(fast)
+# Loading work.ahb_frbm(fast)
+# Loading work.AHB_slave(fast)
+# Loading work.fifo(fast)
+# Loading altera_mf_ver.dcfifo(fast)
+# Loading altera_mf_ver.dcfifo_mixed_widths(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.dcfifo_async(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast__2)
+# Loading altera_mf_ver.dcfifo_dffpipe(fast__2)
+# Loading altera_mf_ver.dcfifo_dffpipe(fast__3)
+# Loading altera_mf_ver.dcfifo_dffpipe(fast__4)
+# Loading altera_mf_ver.dcfifo_fefifo(fast)
+# Loading altera_mf_ver.dcfifo_fefifo(fast__1)
+# Loading altera_mf_ver.dcfifo_low_latency(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast__1)
+# Loading altera_mf_ver.ALTERA_MF_HINT_EVALUATION(fast)
+# Loading altera_mf_ver.dcfifo_dffpipe(fast)
+# Loading altera_mf_ver.dcfifo_dffpipe(fast__1)
+# Loading work.user_logic(fast)
+run 500 ns
+#      0ns Master: Loading command file burst_test.tic.
+#  40000ns Master: Idle.
+#  60000ns Master: Writing 0x00000001 to address 0x00000008.
+#  70000ns Master: Writing 0x00000001 to address 0x0000000c.
+#  80000ns Master: Writing 0x10000000 to address 0x00000000.
+#  90000ns Master: Writing 0x80001111 to address 0x00000000.
+# 100000ns Master: Writing 0x80002222 to address 0x00000000.
+# 110000ns Master: Writing 0x80003333 to address 0x00000000.
+# 120000ns Master: Writing 0x20000000 to address 0x00000000.
+# 130000ns Master: Writing 0x80001111 to address 0x00000000.
+# 140000ns Master: Writing 0x80002222 to address 0x00000000.
+# 150000ns Master: Writing 0x80003333 to address 0x00000000.
+# 160000ns Master: Writing 0x40000000 to address 0x00000000.
+# 190000ns Master: Successfully read 0x00000888 from address 0x00000004.
+# 200000ns Master: Successfully read 0x00001111 from address 0x00000004.
+# 210000ns Master: Successfully read 0x00001999 from address 0x00000004.
+# 230000ns Master: Successfully read 0x00002222 from address 0x00000004.
+# 240000ns Master: Successfully read 0x00004444 from address 0x00000004.
+# 250000ns Master: Successfully read 0x00006666 from address 0x00000004.
+# 260000ns Master: Successfully read 0x0000ffff from address 0x00000010.
+# 270000ns Master: End of TIC command file.
+# End time: 11:38:39 on Aug 10,2015, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 5
