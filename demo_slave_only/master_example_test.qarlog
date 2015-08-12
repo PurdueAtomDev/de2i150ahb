@@ -1,0 +1,28 @@
+Quartus II Archive log --	/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/master_example_test.qarlog
+
+Archive:	/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/master_example_test.qar
+Date:		Mon Aug 10 11:50:53 2015
+Quartus II 64-Bit		14.0.0 Build 200 06/17/2014 SJ Full Version
+
+	=========== Files Selected: ===========
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.atm
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.cfm
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.dpi
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.hdbx
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.logdb
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.map.kpt
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.qxp_info
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.rcf
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.cmp.scidsc
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.atm
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.dpi
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.hdbx
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.logdb
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.map.kpt
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.qxp_info
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/master_example.map.scidsc
+/home/ecegridfs/a/mg196/Desktop/de2i150_AHB/demo_slave_only/db/tmp_qic_export_dir/qic_export_file_list
+	======= Total: 17 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="223" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="164" />
+  </columns>
+ </systemtable>
+ <library expandedCategories="Project,Library" />
+ <window width="1920" height="1150" x="0" y="25" />
+ <generation path="" simulation="VERILOG" />
+</preferences>

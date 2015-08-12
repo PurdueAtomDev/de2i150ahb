@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="adbb8b9607d25b41dcec"/>
+  </project>
+  <file_info>
+    <file device="EP4CGX150DF31C7" path="master_example.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="ahb_slave_with_pcie:slave_inst" name="slave_inst">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME ahb_slave_with_pcie HAS_SOPCINFO 1 GENERATION_ID 1439221506"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
